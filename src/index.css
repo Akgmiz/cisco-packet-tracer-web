@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+@keyframes cableFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cable-animated {
+  animation: cableFlow 2s linear infinite;
+}
+
+.cable-animated-fast {
+  animation: cableFlow 0.7s linear infinite;
+}
+
+/* Cisco Packet Tracer Light-Grey Workspace Canvas */
+.react-flow__background {
+  background-color: #eaedf2 !important;
+}
+
+.react-flow__pane {
+  cursor: default;
+}
+
+/* Cisco Packet Tracer Simple PDU Envelope Cursor */
+.cursor-pdu, .cursor-pdu * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='%23fde047' stroke='%23ca8a04' stroke-width='1.5'%3E%3Crect x='2' y='5' width='24' height='17' rx='2' fill='%23fde047' stroke='%23ca8a04'/%3E%3Cpath d='M2 7l12 10L26 7' stroke='%23ca8a04' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='17' r='2.5' fill='%23ef4444'/%3E%3C/svg%3E") 14 14, crosshair !important;
+}
+
+/* ReactFlow selection box and connection lines */
+.react-flow__selection {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border: 1px dashed #0284c7 !important;
+  border-radius: 4px;
+}
+
+.react-flow__connection-path {
+  stroke: #1e293b !important;
+  stroke-width: 2.5px !important;
+  stroke-dasharray: 6 4 !important;
+  animation: cableFlow 0.8s linear infinite;
+}
+
+/* Cisco Packet Tracer Styled Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #d8dde6;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
